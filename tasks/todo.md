@@ -36,6 +36,10 @@ Plan: C:\Users\Mkaru\.claude\plans\delegated-sniffing-honey.md
 - [x] spot-checked 3 pages (Milk recipe pp.23, A-pantry p.55) by rendering the PDF pages as images and comparing — verbatim match
 - [x] incremental commits (scaffold+engine+partial content, then full merged content — see below)
 
+## Deploy
+- [x] first deployed as wolfwdavid/ck (Pages legacy build, `.nojekyll` needed — Jekyll build failed without it)
+- [x] 2026-11-10: split into its own repo `wolfwdavid/ck-vegan-not-vegan` (history preserved via clone); `ck` is now the CK dashboard that links this and the other CK projects
+- [x] `ck.json` manifest + README for the dashboard
+
 ## Deferred
-- [ ] remote GitHub repo + Pages deploy (ask user first)
 - [ ] Android/Mac app wrapper

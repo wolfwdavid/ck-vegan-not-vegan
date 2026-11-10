@@ -1,0 +1,12 @@
+{
+  "slug": "vegan-not-vegan",
+  "name": "Vegan Not Vegan",
+  "version": "1.0.0",
+  "blurb": "Interactive flipbook edition of the Vegan Not Vegan guide book: essays, dairy and egg swaps, an A-Z pantry, B12 facts and resources.",
+  "repo": "wolfwdavid/ck-vegan-not-vegan",
+  "live": "https://wolfwdavid.github.io/ck-vegan-not-vegan/",
+  "data": {
+    "kind": "flipbook",
+    "content": "data/content.json"
+  }
+}
