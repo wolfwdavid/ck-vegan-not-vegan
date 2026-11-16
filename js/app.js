@@ -143,8 +143,8 @@
     var pct = total > 1 ? (state.index / (total - 1)) * 100 : 0;
     el.progressFill.style.width = pct + '%';
     el.pageCounter.textContent = (state.index + 1) + ' / ' + total;
-    el.zonePrev.setAttribute('aria-hidden', state.index === 0 ? 'true' : 'false');
-    el.zoneNext.setAttribute('aria-hidden', state.index === total - 1 ? 'true' : 'false');
+    el.zonePrev.disabled = state.index === 0;
+    el.zoneNext.disabled = state.index === total - 1;
     highlightJumpMenu();
   }
 

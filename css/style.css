@@ -403,11 +403,40 @@ table.content-table th {
   width: 15%;
   max-width: 64px;
   z-index: 10;
+  padding: 0;
   background: transparent;
   cursor: pointer;
 }
 .nav-zone--prev { left: 0; }
 .nav-zone--next { right: 0; }
+.nav-zone:disabled { visibility: hidden; }
+
+/* visible arrows for mouse users; touch keeps the invisible tap edges and swipe */
+@media (hover: hover) and (pointer: fine) {
+  .nav-zone::after {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-label);
+    font-size: 24px;
+    line-height: 1;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+    color: var(--ink);
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    transition: background .15s ease, color .15s ease;
+  }
+  .nav-zone--prev::after { content: '\2039'; left: 4px; }
+  .nav-zone--next::after { content: '\203A'; right: 4px; }
+  .nav-zone:hover::after { background: var(--ink); color: var(--cream); }
+}
 
 /* ---------- chrome: menu toggle ---------- */
 #menu-toggle {
